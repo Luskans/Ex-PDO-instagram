@@ -1,35 +1,28 @@
-<?php 
-// session_start();
-// require './utils/connexion.php' ?>
 
-<?php 
+<?php
+session_start();
+require './utils/db_connect.php';
 
-// if(isset($_POST['submit']))
-// {
-//     $email = $_POST['email'];
-//     $pass = $_POST['pass'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
 
-//     $request = "SELECT * FROM users where email = '$email' ";
-//     $result = $db->prepare($request);
-//     $result -> execute();
+    if ($email != "" && $password != "") {
+        $request = $db->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
+        $request->execute(array(
+            "email" => $email,
+            "password" => $password
+        ));
+        $response = $request->fetch();
 
-//     if($result->rowCount() > 0) {
-//         $date = $result->fetchAll();
-//         if (password_verify($pass, $date[0]['password'])) {
-//             echo "Connexion effectué";
-//             $_SESSION['email'] = $email;
-
-
-//     } else {
-//         $pass = password_hash($pass, PASSWORD_DEFAULT);
-//         $request = "INSERT INTO users (email, password) VALUES ('$email', '$pass')";
-//         $req =$db -> prepare($request);
-//         $req -> execute();
-//         echo "Enregistrement effectué ! ";
-//     }
-// }
-// }
-
+        if ($response) {
+            // Connexion réussie
+            echo "Vous êtes connecté";
+        } else {
+            $error_msg = "Email ou mot de passe incorrect";
+        }
+    }
+}
 ?>
 
 <form  class ="" action="login.php" method="POST">
@@ -42,3 +35,4 @@
 <button type="submit" name="submit"> Login </button>
 
 </form>
+
