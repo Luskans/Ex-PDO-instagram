@@ -31,14 +31,14 @@
 // }
 
 ?>
-<!-- 
+
 <form  class ="" action="login.php" method="POST">
 
 
-<input type="text" name="email" placeholder="E-mail">
+<input type="text" name="email" placeholder="E-mail" required>
 <br>
-<input type="password" name="pass" placeholder="password">
+<input type="password" name="password" placeholder="Password" required>
 <br><br>
 <button type="submit" name="submit"> Login </button>
 
-</form> -->
+</form>
