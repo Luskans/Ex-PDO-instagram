@@ -7,7 +7,8 @@ include_once('./partials/header.php');
     <input type="file" name="image" required>
 
     <label for="description">Description :</label>
-    <input type="text" name="description" placeholder="Entrez ici la description de votre photo..." required>
+    <!-- <input type="text" name="description" placeholder="Entrez ici la description de votre photo..." required> -->
+    <textarea name="description" required>Entrez ici la description de votre photo...</textarea>
 
     <button type="submit">PUBLIER</button>
 </form>
