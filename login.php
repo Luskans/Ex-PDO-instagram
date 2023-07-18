@@ -3,16 +3,14 @@ session_start();
 require './utils/db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
 
-    if ($email != "" && $password != "") {
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
         $token = bin2hex(random_bytes(32));
         $request = $db->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
         $request->execute(array(
-            "email" => $email,
-            "password" => $password
+            "email" => $_POST["email"],
+            "password" => $_POST["password"]
         ));
         $response = $request->fetch();
 
@@ -28,8 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ./index.php ");
             exit();
         } else {
-            $error_msg = "Email ou mot de passe incorrect";
-            echo $error_msg;
+            echo "Email ou mot de passe incorrect";
         }
     }
 }
@@ -39,5 +36,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="text" name="email" placeholder="E-mail" required><br>
     <input type="password" name="password" placeholder="Password" required><br><br>
     <button type="submit" name="submit">Login</button> <br> <br>
-    <button onclick="window.location.href = './signup.php';"> Sign up </button>
+    <a href="./signup.php"><button> Sign In </button></a>
 </form>

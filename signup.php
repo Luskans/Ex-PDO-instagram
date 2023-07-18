@@ -9,7 +9,7 @@
 <label for="pass"> Votre mot de passe : </label>
 <input type="password" name= "password" placeholder="Entrez votre mot de passe" required>
 <br>
-<button type="submit" name="ok"> Valider </button>
+<button type="submit"> Valider </button>
 
 
 </form>
