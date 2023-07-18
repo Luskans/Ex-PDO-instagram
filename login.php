@@ -33,8 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <form class="" action="login.php" method="POST">
-    <input type="text" name="email" placeholder="E-mail" required><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
+    <input type="text" name="email" placeholder="E-mail"><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
     <button type="submit" name="submit">Login</button> <br> <br>
-    <a href="./signup.php"><button> Sign In </button></a>
 </form>
+<a href="./signin.php"><button> Sign In </button></a>
+
