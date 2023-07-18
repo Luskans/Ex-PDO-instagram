@@ -3,15 +3,20 @@
 <?php
 if(isset($_POST['ok'])) {
 
-    $request = $db->prepare("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)");
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $token = bin2hex(random_bytes(32));
+
+    $request = $db->prepare("INSERT INTO users (name, email, password, token) VALUES (:name, :email, :password, :token)");
     $request->execute([
-            "name" => $_POST['name'],
-            "email" => $_POST['email'],
-            "password" => $_POST['password']
-        ]);
+        "name" => $name,
+        "email" => $email,
+        "password" => $password,
+        "token" => $token
+    ]);
 
-    echo "Enregistrement effectué avec succès.";
+    header("Location: ../login.php");
+    exit();
 }
-
-
 ?>
