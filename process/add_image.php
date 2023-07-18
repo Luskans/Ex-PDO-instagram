@@ -26,7 +26,7 @@ if (isset($_FILES['image']) && (isset($_POST['description']))) {
             //$_SESSION['id'],
             5,
             //'../uploads/'.$file,
-            'C:\Users\Sylvain\Documents\Exercices\Exo-PHP-Instagram\Exercice-php-instagram\uploads',
+            'C:\Users\Sylvain\Documents\Exercices\Exo-PHP-Instagram\Exercice-php-instagram\uploads\pictures',
             $_POST['description']
         ]);
         echo "Image enregistrée";

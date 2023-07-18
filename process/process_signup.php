@@ -10,6 +10,13 @@ if(isset($_POST['ok'])) {
             "password" => $_POST['password']
         ]);
 
+    $id_user = $db->lastInsertId(); // On récupère l'id de l'user qu'on vient d'insérer
+
+    $request = $db->prepare("INSERT INTO profils (id_user) VALUES (:id_user)");
+    $request->execute([
+            "id_user" => $id_user
+        ]);
+
     echo "Enregistrement effectué avec succès.";
 }
 
