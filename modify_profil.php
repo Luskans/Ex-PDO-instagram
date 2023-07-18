@@ -1,9 +1,10 @@
 <?php
+session_start();
 include_once('./partials/header.php');
 require('./process/get_profil.php');
 ?>
 
-<form action="process/update_profil.php" method="post" enctype="multipart/form-data">
+<form action="./process/update_profil.php" method="post" enctype="multipart/form-data">
     <div class="container">
         <main>
             <section class="top">
@@ -28,7 +29,7 @@ require('./process/get_profil.php');
                     </div>
                     <div class="top_right_desciption">
                     <!-- <input type="text" name="description" placeholder="Entrez ici la description de votre profil..."> -->
-                    <textarea name="description"> <?= $description ?> </textarea>
+                        <textarea name="description"> <?= $description ?> </textarea>
                     </div>
                 </div>
             </section>

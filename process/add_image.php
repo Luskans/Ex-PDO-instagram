@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_FILES['image']) && (isset($_POST['description']))) {
 
@@ -18,18 +19,18 @@ if (isset($_FILES['image']) && (isset($_POST['description']))) {
         $uniqueName = uniqid('', true); // on génère un nom unique
         $file = $uniqueName.".".$extension; // notre fichier prendra ce nom
 
-        move_uploaded_file($tmpName, '../uploads/'.$file);    // upload le fichier dans le dossier créé
+        move_uploaded_file($tmpName, '../uploads/pictures/'.$file);    // upload le fichier dans le dossier créé
 
         // on insère dans la database les informations de l'image
         $request = $db->prepare('INSERT INTO images (id_user, link, description, date) VALUES (?, ?, ?, NOW())');
         $request->execute([
-            //$_SESSION['id'],
-            5,
-            //'../uploads/'.$file,
-            'C:\Users\Sylvain\Documents\Exercices\Exo-PHP-Instagram\Exercice-php-instagram\uploads\pictures',
+            $_SESSION['id'],
+            '../uploads/pictures/'.$file,
+            // 'C:\Users\Sylvain\Documents\Exercices\Exo-PHP-Instagram\Exercice-php-instagram\uploads\pictures',
             $_POST['description']
         ]);
-        echo "Image enregistrée";
+        
+        header('Location: ../index.php');
     }
     else {
         echo "Fichier non correct.";

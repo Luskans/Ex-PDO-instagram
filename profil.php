@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('./partials/header.php');
 require('./process/get_profil.php');
 ?>
@@ -30,7 +31,11 @@ require('./process/get_profil.php');
             </div>
         </section>
         <aside>
-            <a href="modify-profil.php?id=5"><button>Modifier le profil</button></a>
+            <?php
+            if ($_GET['id'] == $_SESSION['id']) {
+            ?>
+                <a href="modify_profil.php?id=<?=$_SESSION['id']?>"><button>Modifier le profil</button></a>
+            <?php } ?>
         </aside>
         <section class="bot">
             <div class="bot_card">

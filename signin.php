@@ -1,4 +1,4 @@
-<form method="POST" action="/process/process_signup.php">
+<form method="POST" action="/process/add_user.php">
 
 <label for="nom"> Votre nom : </label>
 <input type="text" name="name" id="nom" placeholder="Entez votre nom" required>

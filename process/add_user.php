@@ -16,9 +16,10 @@ if(!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password'
 
     $id_user = $db->lastInsertId(); // On récupère l'id de l'user qu'on vient d'insérer
 
-    $request = $db->prepare("INSERT INTO profils (id_user) VALUES (:id_user)");
+    $request = $db->prepare("INSERT INTO profils (id_user, name) VALUES (:id_user, :name)");
     $request->execute([
-            'id_user' => $id_user
+            'id_user' => $id_user,
+            'name' => $_POST['name']
         ]);
 
     header("Location: ../login.php");

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if ($_POST['description'] !== $_SESSION['description']) {
 
@@ -7,7 +8,7 @@ if ($_POST['description'] !== $_SESSION['description']) {
     $request = $db->prepare('UPDATE profils SET description = :description WHERE id_user = :id_user');
     $request->execute([
         'description' => $_POST['description'],
-        'id_user' => $_GET['id_user']
+        'id_user' => $_SESSION['id']
     ]);
 
 
@@ -34,13 +35,14 @@ if ($_POST['description'] !== $_SESSION['description']) {
 
         $request = $db->prepare('UPDATE profils SET avatar_link = :avatar_link WHERE id_user = :id_user');
         $request->execute([
-            'avatar_link' => 'C:\Users\Sylvain\Documents\Exercices\Exo-PHP-Instagram\Exercice-php-instagram\uploads\avatars',
-            'id_user' => $_GET['id_user']
+            // 'avatar_link' => 'C:/Users/Sylvain/Documents/Exercices/Exo-PHP-Instagram/Exercice-php-instagram/uploads/avatars/'.$file,
+            'avatar_link' => './uploads/avatars/'.$file,
+            'id_user' => $_SESSION['id']
         ]);
         // $profil = $request->fetch();
     }
 }
 
-header('Location: ../profil.php?id=5');
+header('Location: ../profil.php?id='.$_SESSION['id']);
 
 ?>
