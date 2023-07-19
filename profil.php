@@ -10,6 +10,7 @@ require('./process/get_profil.php');
             <div class="top_left">
                 <img src="<?= $avatar ?>" alt="Photo de profil">
             </div>
+            <p> <?= $profil['name'] ?> </p>
             <div class="top_right">
                 <div class="top_right_stats">
                     <div>
