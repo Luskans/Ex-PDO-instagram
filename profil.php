@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once('./partials/header.php');
 require('./process/get_profil.php');
 ?>
