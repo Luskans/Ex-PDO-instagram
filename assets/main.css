@@ -10,27 +10,32 @@ nav a {
     text-decoration: none;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: repeat(8, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 15px;
-    margin-top: 20px;
-    margin-left : 15px;
-}
-    
-.div1 { grid-area: 1 / 1 / 2 / 2; }
-.div2 { grid-area: 2 / 1 / 3 / 2; }
-.div3 { grid-area: 3 / 1 / 4 / 2; }
-.div4 { grid-area: 4 / 1 / 5 / 2; }
-.div5 { grid-area: 5 / 1 / 6 / 2; }
-.div6 { grid-area: 6 / 1 / 7 / 2; }
-.div7 { grid-area: 7 / 1 / 8 / 2; }
-.div8 { grid-area: 8 / 1 / 9 / 2; }
-.div9 { grid-area: 1 / 2 / 9 / 3; } 
-.div10 { grid-area: 1 / 3 / 9 / 4; }
+
 
 /* Placer la fil d'actualité dans la div 9 
 (faire un foreach avec une fonction 
 afin d'afficher toutes les données dans la base de données) */
+
+/* GALLERY INDEX */
+
+.gallery {
+    
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1vmin;
+    padding: 0 14px;
+    flex-wrap: wrap;
+}
+
+.gallery div {
+    height: 250px;
+    flex-grow: 1;
+    list-style-type: none;
+}
+
+.gallery div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
