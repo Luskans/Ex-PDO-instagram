@@ -4,7 +4,7 @@ require('./process/get_index.php');
 ?>
 
 <main>
-    <div class=" div9 container">
+    <div class="container">
         <p> <a href="upload.php">Ajouter une image</a> </p>
         <p> <a href="./process/process_logout.php">Se déconnecter</a> </p>
         <section class = 'gallery'>
