@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,44 +18,44 @@
             </div>
             <div class="div2">
                 <a class="d-flex" href="../index.php">
-                    <img src="../assets/image/accueil.png" alt="Icone Accueil">
+                    <img src="../assets/icons/home.png" alt="Icone Accueil">
                     <p> Accueil </p>
                 </a>
             </div>
             <div class="div3">
                 <a class="d-flex" href="#">
-                    <img src="../assets/image/2205851-icone-en-forme-de-loupe-vectoriel-removebg-preview.png" alt="rechercher">
+                    <img src="../assets/icons/search.png" alt="rechercher">
                     <p> Recherche </p>
                 </a>
             </div>
             <div class="div4">
                 <a class="d-flex" href="#">
-                    <img src="../assets/image/iconemessage.png" alt="">
+                    <img src="../assets/icons/message.png" alt="">
                     <p> Messages </p>
                 </a>
             </div>
             <div class="div5">
                 <a class="d-flex" href="#">
-                    <img src="../assets/image/notifications.png" alt="">
+                    <img src="../assets/icons/heart1.png" alt="">
                     <p> Notifications </p>
                 </a> 
             </div>
             <div class="div6">
-                <a class="d-flex" href="#">
-                    <img src="../assets/image/ajout.png" alt="">
-                    <p> Créer/Publier </p>
+                <a class="d-flex" href="./upload.php">
+                    <img src="../assets/icons/create.png" alt="un plus">
+                    <p> Ajout </p>
                 </a> 
             </div>
             <div class="div7">
-                <a class="d-flex" href="../profil.php">
-                    <img src="" alt="">
+                <a class="d-flex" href="./profil.php?id=<?=$_SESSION['id']?>">
+                    <img class="avatar_header" src="<?= $_SESSION['avatar_link'] ?>" alt="la photo de profil">
                     <p> Profil </p>
                 </a>
             </div>
             <div class="div8">
-                <a class="d-flex" href="">
-                    <img src="../assets/image/Hamburger_icon.svg.png" alt="menu hamburger" class="menuhamburger">
-                    <p> Plus </p>
+                <a class="d-flex" href="./process/process_logout.php">
+                    <img src="../assets/icons/logout.png" alt="menu hamburger" class="menuhamburger">
+                    <p> Déconnexion </p>
                 </a> 
             </div>
         </nav>

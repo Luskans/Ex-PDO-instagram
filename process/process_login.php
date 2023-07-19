@@ -38,8 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ]);
             $profil = $request->fetch();
 
+            // On met une photo de profil par défaut si l'utilisateur n'en a pas
+            $avatar = ($profil['avatar_link'] == NULL) ? '.\uploads\avatars\user1.png' : $profil['avatar_link'];
+
             // On crée des variables de session avec l'avatar et la description de la personne connectée
-            $_SESSION['avatar_link'] = $profil['avatar_link'];
+            // $_SESSION['avatar_link'] = $profil['avatar_link'];
+            $_SESSION['avatar_link'] = $avatar;
             $_SESSION['description'] = $profil['description'];
 
 
