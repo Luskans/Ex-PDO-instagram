@@ -4,20 +4,20 @@ require('./process/get_image.php');
 require('./process/add_like.php');
 ?>
 
-<main class="img_display d-flex">
+<main class="img_display d-flex justify-content-between">
     <section>
-        <article>
+        <article class="mb-3">
             <img src="<?=$image['link']?>">
         </article>
         <aside class="d-flex justify-content-around align-items-center">
             <div class="like">
                 <img src="./assets/icons/heart1.png" alt="un coeur">
             </div>
-            <div class="d-flex flex-column align-items-center">
+            <div class="stat1 d-flex flex-column align-items-center">
                 <p> <?=$image['nb_likes']?> </p>
                 <p> Likes </p>
             </div>
-            <div class="d-flex flex-column align-items-center">
+            <div class="stat2 d-flex flex-column align-items-center">
                 <p> <?=$image['nb_views']?> </p>
                 <p> Vues </p>
             </div>
@@ -29,12 +29,12 @@ require('./process/add_like.php');
     ?>
     <section>
         <article>
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 mb-3">
                 <div class="avatar_image">
-                    <a href="./profil.php?id=<?=$profil['id_user']?>"> <img src="<?=$avatar_image?>"> </a>
+                    <a href="./profil.php?id=<?=$profil['id']?>"> <img src="<?=$avatar_image?>"> </a>
                 </div>
-                <p> <?= $profil['name'] ?> </p>
-                <p> <?=$image['date']?> </p>
+                <a href="./profil.php?id=<?=$profil['id']?>" class="link"> <p class="name_image"> <?= $profil['name'] ?> </p> </a>
+                <p class="date_image"> <?=$image['date']?> </p>
             </div>
             <div class="mb-5 border-bottom">
                 <p> <?= $image['description'] ?> </p>
@@ -54,24 +54,24 @@ require('./process/add_like.php');
                     // Si l'auteur du commentaire n'a pas de photo, on en met une par défaut
                     $avatar_comment = ($autor_comment['avatar_link'] == NULL) ? "./uploads/avatars/user1.png" : $autor_comment['avatar_link'];
             ?>
-                    <div class="d-flex flex-column">
+                    <div class="comment d-flex flex-column mb-3">
                         <div class="d-flex gap-3">
                             <div class="avatar_comment">
                                 <a href="./profil.php?id=<?=$autor_comment['id_user']?>"> <img src="<?=$avatar_comment?>"> </a>
                             </div>
-                            <p> <a href="./profil.php?id=<?=$autor_comment['id_user']?>"> <?=$autor_comment['name']?> </a> </p>
-                            <p> <?=$comment['date']?> </p>
+                            <p class="name_comment"> <a href="./profil.php?id=<?=$autor_comment['id_user']?>" class="link"> <?=$autor_comment['name']?> </a> </p>
+                            <p class="date_comment"> <?=$comment['date']?> </p>
                         </div>
-                        <div class="mb-5">
-                            <p> <?=$comment['comment']?> </p>
+                        <div>
+                            <p class="text_comment"> <?=$comment['comment']?> </p>
                         </div>
                     </div>
                 <?php } ?>
         </article>
 
-        <form action="./process/add_comment.php?id=<?=$image['id']?>" method="post">
-            <textarea name="comment" required></textarea>
-            <button type="submit">Envoyer</button>
+        <form class="comment_form d-flex flex-column gap-3" action="./process/add_comment.php?id=<?=$image['id']?>" method="post">
+            <textarea name="comment" placeholder="Écrivez votre commentaire ici..."></textarea>
+            <button class="btn btn-outline-secondary" type="submit">Envoyer</button>
         </form>
     </section>
 </main>

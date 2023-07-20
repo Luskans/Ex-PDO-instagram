@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+
 body {
     width: 100%;
 }
@@ -5,11 +7,21 @@ body {
 /*////////////// HEADER ////////////////*/
 
 header {
-    width: 10%;
-    min-width: 150px;
+    min-width: 220px;
     height: 100vh;
     border-right: 1px solid rgb(255, 255, 255);
     box-shadow: 5px -2px 30px rgb(235, 235, 235);
+    padding: 50px 10px 0 10px;
+    position: fixed;
+}
+
+.block {
+    min-width: 220px;
+}
+
+.div1 a {
+    font-family: 'Norican', cursive;
+    font-size: 2.6em;
 }
 
 nav a {
@@ -20,78 +32,156 @@ nav a {
 nav img {
     width: 40px;
     height: 40px;
-    /* margin: 10px; */
 }
 
 .avatar_header {
-    /* width: 30px;
-    height: 30px;
-    object-fit: cover; */
     border-radius: 20px;
 }
 
-/*////////////// IMAGE ////////////////*/
-
-.img_display {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.img_display section:nth-child(1) article {
-    width: 80%;
-}
-
-.img_display section:nth-child(1) aside {
-    width: 80%;
-}
-
-.img_display section:nth-child(1) article img {
-    width: 100%;
-}
-
-.avatar_comment, .avatar_image {
-    width: 50px;
-}
-
-.avatar_comment img, .avatar_image img {
-    width: 100%;
-    max-height: 50px;
-    object-fit: cover;
-    border-radius: 50px;
-}
-
-/*////////////// GALLERY INDEX ////////////////*/
+/*////////////// INDEX ////////////////*/
 
 .index_display {
     width: 100%;
-    min-width: 400px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5%;
 }
-
-/* .gallery {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    gap: 1vmin;
-    flex-wrap: wrap;
-} */
 
 .gallery {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .gallery div {
-    height: 250px;
-    flex-grow: 1;
-    list-style-type: none;
+    width: 300px;
+    height: 300px;
+    /* flex-grow: 1; */
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(235, 235, 235);
 }
 
 .gallery div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/*////////////// PROFIL ////////////////*/
+
+.profil_display {
+    width: 100%;
+    padding: 5%;
+}
+
+.profil_name {
+    font-size: 3em;
+}
+
+.profil_avatar{
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(235, 235, 235);
+    width: 35%;
+}
+
+.profil_avatar img {
+    width: 100%;
+}
+
+.top_right {
+    width: 35%;
+}
+
+/*////////////// IMAGE ////////////////*/
+
+.img_display {
+    width: 100%;
+    padding: 5%;
+}
+
+.img_display section:nth-child(1) {
+    width: 58%;
+}
+
+.img_display section:nth-child(2) {
+    width: 38%;
+}
+
+.img_display section:nth-child(1) article img {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(235, 235, 235);
+}
+
+.stat1 p:nth-child(1), .stat2 p:nth-child(1) {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.stat1 p:nth-child(2), .stat2 p:nth-child(2) {
+    font-style: italic;
+}
+
+.avatar_image {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+}
+
+.name_image {
+    font-size: 2em;
+    font-weight: bold;
+    height: 100px;
+    line-height: 100px;
+}
+
+.date_image {
+    font-style: italic;
+    height: 100px;
+    line-height: 110px;
+}
+
+.avatar_comment img, .avatar_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.comment {
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(235, 235, 235);
+    /* background-color: rgb(225, 225, 225); */
+}
+
+.avatar_comment {
+    width: 50px;
+    height: 50px;
+}
+
+.name_comment {
+    font-size: 1.2em;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+}
+
+.date_comment {
+    font-size: 0.8em;
+    font-style: italic;
+    height: 50px;
+    line-height: 53px;
+}
+
+.link {
+    color: black;
+    text-decoration: none;
+}
+
+.comment_form textarea {
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(213, 213, 213);
+}
+
+.comment_form button {
+    width: 150px;
 }

@@ -45,6 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // $_SESSION['avatar_link'] = $profil['avatar_link'];
             $_SESSION['avatar_link'] = $avatar;
             $_SESSION['description'] = $profil['description'];
+            $_SESSION['name'] = $profil['name'];
+            $_SESSION['id_profil'] = $profil['id'];
 
 
             header("Location: ../index.php ");
