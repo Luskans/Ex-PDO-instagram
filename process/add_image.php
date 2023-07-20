@@ -12,8 +12,8 @@ if (isset($_FILES['image']) && (isset($_POST['description']))) {
 
     $tabExtension = explode('.', $name);    // on sépare dans un tableau le nom du fichier selon le point
     $extension = strtolower(end($tabExtension));    // on récupère la fin du tableau donc l'extension
-    $extensions = ['jpg', 'png', 'jpeg', 'gif'];    // tableau des extensions acceptées
-    $maxSize = 500000;  // taille de 5mo maximum
+    $extensions = ['jpg', 'png', 'jpeg', 'gif', 'JPG', 'PNG', 'JPEG', 'GIF'];    // tableau des extensions acceptées
+    $maxSize = 5000000;  // taille de 5mo maximum
 
     if ((in_array($extension, $extensions)) && ($size <= $maxSize) && $error == 0) {
         $uniqueName = uniqid('', true); // on génère un nom unique

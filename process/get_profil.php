@@ -3,9 +3,9 @@
 require('./utils/db_connect.php');
 
 // On récupère toutes les infos du profil dont l'id est celle reçue dans le get
-$request = $db->prepare('SELECT * FROM profils WHERE id_user = :id_user');
+$request = $db->prepare('SELECT * FROM profils WHERE id = :id');
 $request->execute([
-    'id_user' => $_GET['id'],
+    'id' => $_GET['id'],
 ]);
 $profil = $request->fetch();
 // var_dump($profil);
@@ -17,5 +17,12 @@ $avatar = ($profil['avatar_link'] == NULL) ? '.\uploads\avatars\user1.png' : $pr
 // $following = ($profil['nb_following'] == NULL) ? 0 : $profil['nb_following'];
 // $followed = ($profil['nb_followed'] == NULL) ? 0 : $profil['nb_followed'];
 // $number = ($profil['nb_images'] == NULL) ? 0 : $profil['nb_images'];
+
+// On récupère toutes les images selon l'id_user
+$request = $db->prepare('SELECT * FROM images WHERE id_user = :id_user');
+$request->execute([
+    'id_user' => $profil['id_user']
+]);
+$images = $request->fetchAll();
 
 ?>

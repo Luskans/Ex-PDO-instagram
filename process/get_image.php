@@ -17,7 +17,7 @@ $request->execute([
 $profil = $request->fetch();
 
 // On récupère tous les commentaires selon l'id de l'image
-$request = $db->prepare('SELECT * FROM comments WHERE id_image = :id_image');
+$request = $db->prepare('SELECT * FROM comments WHERE id_image = :id_image ORDER BY date DESC');
 $request->execute([
     'id_image' => $image['id']
 ]);
@@ -29,6 +29,5 @@ $request->execute([
     'id_image' => $image['id']
 ]);
 $autor_comment = $request->fetchAll();
-
 
 ?>
