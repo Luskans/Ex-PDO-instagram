@@ -30,7 +30,7 @@ require('./process/get_profil.php');
             </div>
             <div >
                 <?php if ($_GET['id'] == $_SESSION['id_profil']) { ?>
-                    <a href="modify_profil.php?id=<?=$_SESSION['id']?>">
+                    <a href="modify_profil.php?id=<?=$_SESSION['id_profil']?>">
                         <button class="modify_button btn btn-outline-secondary">Modifier le profil</button>
                     </a>
                 <?php } ?>

@@ -77,7 +77,11 @@ nav img {
     font-size: 3em;
 }
 
-.profil_avatar{
+.top_left {
+    width: 35%;
+}
+
+.profil_avatar {
     border: 1px solid rgb(255, 255, 255);
     box-shadow: 5px -2px 30px rgb(235, 235, 235);
     width: 35%;
@@ -89,6 +93,12 @@ nav img {
 
 .top_right {
     width: 35%;
+}
+
+.profil_description {
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 5px -2px 30px rgb(213, 213, 213);
+    width: 100%;
 }
 
 /*////////////// IMAGE ////////////////*/
@@ -182,6 +192,6 @@ nav img {
     box-shadow: 5px -2px 30px rgb(213, 213, 213);
 }
 
-.comment_form button {
+.comment_form button, .modify_button {
     width: 150px;
 }
