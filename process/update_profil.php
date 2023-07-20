@@ -43,6 +43,6 @@ if ($_POST['description'] !== $_SESSION['description']) {
     }
 }
 
-header('Location: ../profil.php?id='.$_SESSION['id']);
+header('Location: ../profil.php?id='.$_SESSION['id_profil']);
 
 ?>
