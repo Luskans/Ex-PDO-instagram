@@ -10,8 +10,8 @@
 </head>
 <body>
 
-<div class="parent">
-<div class="div1"> 
+<div class="parent1">
+<div class="divlog"> 
 <img src="/assets/icons/InstaKILO-removebg-preview.png" alt="logo">
 <div>
 <h1> InstaKilo</h1>
