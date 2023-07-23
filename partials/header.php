@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav class="parent d-flex flex-column gap-5">
+    <nav class="parent d-flex flex-column gap-5 header-container">
             <div class="div1">
                 <a class="d-flex align-items-center gap-3" href="../index.php" class="logo"> Instakilo </a>
             </div>
