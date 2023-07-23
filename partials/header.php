@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="div4">
-                <a class="d-flex align-items-center gap-3" href="#">
+                <a class="d-flex align-items-center gap-3" href="../message.php">
                     <img src="../assets/icons/message.png" alt="">
                     <p> Messages </p>
                 </a>
