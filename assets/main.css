@@ -298,40 +298,40 @@ input {
 
 
 
-  
-  .container {
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .row {
+}
+
+.row {
     display: flex;
-  }
-  
-  .user-list {
+}
+
+.user-list {
     list-style: none;
     padding: 0;
-  }
-  
-  .user-list-item {
+}
+
+.user-list-item {
     margin-bottom: 10px;
     cursor: pointer;
     padding: 10px;
     background-color: #f2f2f2;
     border-radius: 5px;
-  }
-  
-  .user-list-item:hover {
+}
+
+.user-list-item:hover {
     background-color: #e6e6e6;
-  }
-  
+}
 
-  .user-list a {
+
+.user-list a {
     text-decoration: none;
-  }
+}
 
-  .chat-box-container {
+.chat-box-container {
     border: 1px solid #00858a;
     border-radius: 5px;
     padding: 10px;
@@ -339,17 +339,19 @@ input {
     overflow: scroll;
     width: 100%;
     height: 700px;
-  }
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
     width: 50px;
-  }
-  .bubble {
+}
+
+.bubble {
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
-  }
-  
-  .bubbleright {
+}
+
+.bubbleright {
     background-color: #f2f2f2;
     text-align: right;
     border: solid 1px;
@@ -358,23 +360,19 @@ input {
     text-align: center;
     justify-content: center;
     position: relative;
-    border-radius: 4% 96% 6% 94% / 100% 4% 96% 0% ;
-    background: rgb(36,19,0);
-    background: linear-gradient(90deg, rgba(36,19,0,1) 0%, rgba(233,130,198,0.2777485994397759) 8%, rgba(0,212,255,1) 100%);
-    
-  }
-  
-  .bubbleleft {
+    border-radius: 20px;
+    background-color: rgba(180, 106, 158, 0.466);
+
+}
+
+.bubbleleft {
     border: solid 1px;
     margin-right: 500px;
-    background-color: #e2ffc7;
+    background-color: #5bdfc976;
     text-align: left;
     margin-bottom: 10px;
-    border-radius: 4% 96% 6% 94% / 100% 4% 96% 0% ;
+    border-radius: 20px;
     text-align: center;
     justify-content: center;
 
-  }
-  
-  
-  
+}
