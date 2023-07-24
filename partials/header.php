@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./assets/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-<body class="d-flex">
+<body>
     <header>
-        <nav class="parent d-flex flex-column gap-5">
+    <nav class="parent d-flex flex-column gap-5 header-container">
             <div class="div1">
                 <a class="d-flex align-items-center gap-3" href="../index.php" class="logo"> Instakilo </a>
             </div>
@@ -29,7 +29,7 @@
                 </a>
             </div>
             <div class="div4">
-                <a class="d-flex align-items-center gap-3" href="#">
+                <a class="d-flex align-items-center gap-3" href="../message.php">
                     <img src="../assets/icons/message.png" alt="">
                     <p> Messages </p>
                 </a>

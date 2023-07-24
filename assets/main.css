@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
-
 body {
     width: 100%;
 }
@@ -122,12 +120,14 @@ nav img {
     box-shadow: 5px -2px 30px rgb(235, 235, 235);
 }
 
-.stat1 p:nth-child(1), .stat2 p:nth-child(1) {
+.stat1 p:nth-child(1),
+.stat2 p:nth-child(1) {
     font-size: 2em;
     font-weight: bold;
 }
 
-.stat1 p:nth-child(2), .stat2 p:nth-child(2) {
+.stat1 p:nth-child(2),
+.stat2 p:nth-child(2) {
     font-style: italic;
 }
 
@@ -144,13 +144,19 @@ nav img {
     line-height: 100px;
 }
 
-.date_image {
+date_image {
     font-style: italic;
     height: 100px;
     line-height: 110px;
 }
 
-.avatar_comment img, .avatar_image img {
+.avatar_comment,
+.avatar_image {
+    width: 50px;
+}
+
+.avatar_comment img,
+.avatar_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -192,7 +198,8 @@ nav img {
     box-shadow: 5px -2px 30px rgb(213, 213, 213);
 }
 
-.comment_form button, .modify_button {
+.comment_form button,
+.modify_button {
     width: 150px;
 }
 
@@ -273,5 +280,88 @@ input {
 
 .submit2 {
     margin-top: 50px;
+
+}
+
+/*////////////// MESSAGES ////////////////*/
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.user-list-item:hover {
+    background-color: #e6e6e6;
+}
+
+
+.user-list a {
+    text-decoration: none;
+}
+
+.chat-box-container {
+    border: 1px solid #00858a;
+    border-radius: 5px;
+    padding: 10px;
+    flex-grow: 1;
+    overflow: scroll;
+    width: 100%;
+    height: 700px;
+}
+
+::-webkit-scrollbar {
+    width: 50px;
+}
+
+.bubble {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.bubbleright {
+    background-color: #f2f2f2;
+    text-align: right;
+    border: solid 1px;
+    margin-left: 500px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(180, 106, 158, 0.466);
+
+}
+
+.bubbleleft {
+    border: solid 1px;
+    margin-right: 500px;
+    background-color: #5bdfc976;
+    text-align: left;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
 
 }
