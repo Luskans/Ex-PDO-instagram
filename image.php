@@ -1,7 +1,6 @@
 <?php
 include_once('./partials/header.php');
 require('./process/get_image.php');
-require('./process/add_like.php');
 ?>
 
 <main class="img_display d-flex justify-content-between">
@@ -57,9 +56,9 @@ require('./process/add_like.php');
                     <div class="comment d-flex flex-column mb-3">
                         <div class="d-flex gap-3">
                             <div class="avatar_comment">
-                                <a href="./profil.php?id=<?=$autor_comment['id_user']?>"> <img src="<?=$avatar_comment?>"> </a>
+                                <a href="./profil.php?id=<?=$autor_comment['id']?>"> <img src="<?=$avatar_comment?>"> </a>
                             </div>
-                            <p class="name_comment"> <a href="./profil.php?id=<?=$autor_comment['id_user']?>" class="link"> <?=$autor_comment['name']?> </a> </p>
+                            <p class="name_comment"> <a href="./profil.php?id=<?=$autor_comment['id']?>" class="link"> <?=$autor_comment['name']?> </a> </p>
                             <p class="date_comment"> <?=$comment['date']?> </p>
                         </div>
                         <div>

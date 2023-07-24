@@ -195,3 +195,83 @@ nav img {
 .comment_form button, .modify_button {
     width: 150px;
 }
+
+/*////////////// LOGIN ////////////////*/
+
+
+.parent1 {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,219,224,1) 150%);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.div10 {
+    grid-area: 3 / 3 / 7 / 5;
+    margin-top: 0px;
+    text-align: center;
+    border-radius: 5%;
+    padding: 0px 0px 0px 0px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,219,224,1) 150%);
+    float:left;
+    padding:2px;
+    border:1px solid #ffffff;}
+
+h1 {
+    font-family: 'Norican', cursive;
+}
+
+
+.div1 img {
+    width: 30%;
+    margin-bottom: 10px;
+}
+
+.signin {
+    margin-bottom: 20px;
+}
+
+input {
+    width:300px;
+}
+
+
+
+/*////////////// SIGN ////////////////*/
+
+
+.parent2 {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,219,224,1) 150%);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.divsignin {
+    grid-area: 3 / 3 / 7 / 5;
+    margin-top: 150px;
+    text-align: center;
+    border-radius: 5%;
+    padding: 0px 0px 0px 0px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(210,219,224,1) 150%);
+    float:left;
+    border:1px solid #ffffff;
+    padding: 90px;
+}
+
+.divsignin h1{
+    margin-bottom: 50px;
+}
+
+.submit2 {
+    margin-top: 50px;
+
+}
